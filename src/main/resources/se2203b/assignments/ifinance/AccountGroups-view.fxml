@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se2203b.assignments.ifinance.AccountGroupsController">
+   <children>
+      <TreeView fx:id="tree" layoutX="26.0" layoutY="71.0" onMouseClicked="#handleTreeViewClick" prefHeight="352.0" prefWidth="266.0">
+         <contextMenu>
+            <ContextMenu />
+         </contextMenu></TreeView>
+      <TitledPane fx:id="ac" animated="false" layoutX="320.0" layoutY="72.0" prefHeight="306.0" prefWidth="176.0" text="Add or Change Group Name">
+        <content>
+          <AnchorPane fx:id="anchor" minHeight="0.0" minWidth="0.0" prefHeight="315.0" prefWidth="174.0">
+               <children>
+                  <Label layoutX="16.0" layoutY="22.0" text="Group Name" />
+                  <TextField fx:id="name" layoutX="16.0" layoutY="48.0" />
+                  <Button fx:id="save" layoutX="125.0" layoutY="127.0" mnemonicParsing="false" onAction="#saveBtn" text="Save" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="exit" layoutX="320.0" layoutY="396.0" mnemonicParsing="false" onAction="#exitBtn" prefHeight="26.0" prefWidth="176.0" text="Exit" />
+      <Label layoutX="192.0" layoutY="35.0" text="Custom Accounts Groups Form">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
